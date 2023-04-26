@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: admin
+  password: Gandalf.991
+  database: vantagedb
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: vantagedb_test
+
+production:
+  <<: *default
+  database: vantagedb_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  host: myapp.production.com
