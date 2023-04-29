@@ -72,3 +72,13 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "twitter", "~> 7.0"
+
+gem "whenever", "~> 1.0"
+
+gem "mechanize", "~> 2.9"
+
+gem "bootstrap", "~> 5.2"
+
+gem "jquery-rails", "~> 4.5"

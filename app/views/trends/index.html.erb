@@ -1,0 +1,40 @@
+<div class="container">
+  <h1 class="text-center mt-4 mb-4">Trends</h1>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="google-tab" data-bs-toggle="tab" href="#google">Google</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="reddit-tab" data-bs-toggle="tab" href="#reddit">Reddit (Coming Soon)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="facebook-tab" data-bs-toggle="tab" href="#facebook">Facebook (Coming Soon)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="twitter-tab" data-bs-toggle="tab" href="#twitter">Twitter (Coming Soon)</a>
+    </li>
+  </ul>
+  <div class="tab-content mt-3">
+    <div class="tab-pane active" id="google" role="tabpanel" aria-labelledby="google-tab">
+      <div class="list-group">
+        <% @google_trends.each_with_index do |trend, index| %>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1"><%= index + 1 %>. <%= trend.name %></h5>
+            </div>
+            <p class="mb-1"><%= trend.url %></p>
+          </a>
+        <% end %>
+      </div>
+    </div>
+    <div class="tab-pane" id="reddit" role="tabpanel" aria-labelledby="reddit-tab">
+      <p>Coming Soon</p>
+    </div>
+    <div class="tab-pane" id="facebook" role="tabpanel" aria-labelledby="facebook-tab">
+      <p>Coming Soon</p>
+    </div>
+    <div class="tab-pane" id="twitter" role="tabpanel" aria-labelledby="twitter-tab">
+      <p>Coming Soon</p>
+    </div>
+  </div>
+</div>
